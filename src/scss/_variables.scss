@@ -1,0 +1,68 @@
+// FONTS
+@font-face {
+    font-family: "Myriad Pro";
+    src: local("Myriad Pro"),
+        url(../fonts/MyriadPro-Regular.woff) format("woff");
+}
+$font-primary: 'PT Serif', serif;
+$font-secondary: 'Roboto', sans-serif;
+$font-tertiary: 'Myriad Pro', sans-serif;
+
+// COLORS
+$color-white: #ffffff;
+
+$color-dark-1: #414141;
+$color-dark-2: #303030;
+
+$color-grey-1: #d3d2d2;
+$color-grey-2: #898989;
+$color-grey-3: #454545;
+$color-grey-4: #595959;
+$color-grey-5: #999999;
+
+$color-gold: #ffc222;
+
+// SHADOWS
+$shadow-small: 0rem 3rem 4rem rgba(0,0,0,.1);
+$shadow: 0rem 3rem 4rem rgba(0,0,0,.9);
+
+//BORDERS
+$border-gold: 1px solid $color-gold;
+$border-gold-big: 2px solid $color-gold; 
+$border-white: 1px solid $color-white;
+$border-grey: 1px solid $color-grey-1;
+$border-grey-dark:  1px solid $color-grey-2;
+$border-grey-big: 2px solid $color-grey-1;
+$border-dark: 1px solid $color-dark-2;
+$border-red: 1px solid red;
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:     Phone
+600 - 900px:     Tablet portrait
+900 - 1200px:    Tablet landscape
+1200 - 1800px:    Desktop
+1800px +:     Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + Typography > general layout + greed > page layout > components
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) {@content;} //600px / 16px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and(max-width: 56.25em) {@content;} //900px / 16px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) {@content;} //1200px / 16px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) {@content;} //1800px / 16px
+    }
+}

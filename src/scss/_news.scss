@@ -1,0 +1,241 @@
+.news {
+
+
+    &__container {
+        position: relative;
+        padding: 7.4rem 1.5rem 10.5rem 1.5rem;
+
+        @include respond(tab-port) {
+            padding: 4.4rem 1.5rem 3.5rem 1.5rem;
+        }
+    }
+
+    //TOP
+
+    &__top-container {
+
+        @include respond(phone) {
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    &__top {
+        margin-left: 1.5rem;
+        margin-bottom: 4.5rem;
+        flex: 0 0 45%;
+
+        @include respond(phone) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__top-btn {
+        padding: .9rem 4.2rem;
+        margin-right: 6rem;
+    }
+
+    //BOTTOM
+
+    &__bottom-container {
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+       
+    }
+
+    &__large-boxes {
+        flex: 0 0 55.2rem;
+        box-shadow: $shadow-small;
+
+        @include respond(tab-land) {
+            flex: 0 0 50.2rem;
+        }
+
+        @include respond(tab-port) {
+            flex: 0 0 100%;
+        }
+
+    }
+
+    &__small-boxes {
+        flex: 0 0 calc(100% - 55.2rem - 9rem);
+        display: flex;
+
+        @include respond(tab-land) {
+            flex: 0 0 calc(100% - 50.2rem - 3rem);
+        }
+
+        @include respond(tab-port) {
+            margin-top: 3.3rem;
+            flex: 0 0 60%;
+            justify-content: space-around;
+        }
+        
+        @include respond(phone) {
+            margin-top: 3.3rem;
+            flex: 0 0 100%;
+            justify-content: space-around;
+        }
+  
+    }
+
+    &__box {
+        height: 34.3rem;
+        position: relative;
+    }
+
+    &__box--large {
+        padding: 6.6rem 3.6rem 5rem 7rem;
+        color: $color-grey-3;
+
+        @include respond(tab-land) {
+            padding: 6.6rem 1rem 5rem 2rem;
+        }
+
+        @include respond(tab-port) {
+            padding: 5.6rem 9.6rem 5rem 12rem;
+        }
+
+        @include respond(phone) {
+            padding: 3.6rem 1rem 5rem 1rem;
+        }
+    }
+
+    &__box--large::before {
+        content: "\f10e";
+        display: inline-block;
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900;
+        position: absolute;
+        top: 0;
+        left: 7rem;
+        color: $color-white;
+        padding: 1.5rem 3.5rem;
+        background-color: $color-gold;
+
+        @include respond(tab-land) {
+            left: 2rem;
+        }
+
+        @include respond(tab-port) {
+            left: 12rem;
+        }
+
+        @include respond(phone) {
+            padding: .8rem 1.5rem;
+            left: 1rem;
+        }
+    }
+
+    &__box--small {
+
+        &:first-child {
+            margin-right: 3.3rem;
+
+            @include respond(tab-land) {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__text-large {
+        margin: 2rem 0;
+        color: $color-grey-2;
+
+        @include respond(tab-land) {
+            margin: 1rem 0;
+        }
+    }
+
+    &__text-small {
+        line-height: 1.4;
+    }
+
+    &__date {
+        line-height: 1;
+        color: $color-white;
+        font-weight: 800;
+        background-color: $color-gold;
+        position: absolute;
+        padding: 3.2rem 1rem 0.5rem;
+        top: 0;
+        left: 1rem;
+    }
+}
+
+// NEWS SLIDER
+.news-slider {
+    overflow: hidden;
+
+    & .slick-list {
+        overflow: hidden;
+    }
+    & .slick-track {
+        display: flex;
+    }
+
+    & .slick-arrow {
+        position: absolute;
+        bottom: 3.3rem;
+        height: 4rem;
+        width: 4rem;
+        font-family: $font-secondary;
+        font-weight: 500;
+        border: $border-grey-dark;
+        box-shadow: $shadow-small;
+        transition: all .2s, background-color .1s;
+        z-index: 10;
+        color: transparent;
+        cursor: pointer;
+
+        @include respond(tab-port) {
+            bottom: 46%;
+        }
+
+        @include respond(phone) {
+            bottom: 42%;
+        }
+
+        &:hover {
+            border: $border-gold;
+            background-color: $color-gold;
+        }
+    }
+    & .slick-prev{
+        left: 53.2rem;
+        background: url(../img/chevron-left_grey.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+
+        @include respond(phone) {
+            left: 20rem;
+        }
+
+        &:hover {
+            background-image: url(../img/chevron-left_white.svg);
+      }
+
+    }
+    & .slick-next{
+        left: 60.2rem;
+        background: url(../img/chevron-right_grey.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+
+        @include respond(phone) {
+            left: 25rem;
+        }
+
+        &:hover {
+            background-image: url(../img/chevron-right_white.svg);
+      }
+    }
+}

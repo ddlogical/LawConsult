@@ -1,0 +1,112 @@
+// SERVICES
+.services {
+
+ 
+    // TOP
+    &__container {
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+    }
+
+    &__top {
+        margin-left: 1.5rem;
+        flex: 0 0 45%;
+        margin-top: 6rem;
+
+        @include respond(phone) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__top-btn {
+        padding: .9rem 4.2rem;
+        margin-top: 6rem;
+        margin-right: 6rem;
+
+        @include respond(phone) {
+            margin-right: 0;
+        }
+    }
+    
+    // BOTTOM
+    &__bottom {
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+    }
+
+    &__card {
+        flex: 0 0 30%;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 37.5rem;
+        margin-top: 6rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        box-shadow: $shadow-small;
+        padding: 1rem 2rem 3rem 2rem;
+
+        @include respond(tab-port) {
+            flex: 0 0 50%;
+            margin: 5rem 25%;
+        }
+
+        @include respond(phone) {
+            flex: 0 0 70%;
+            margin: 5rem 15%;
+        }
+    }
+
+    &__card-logo {
+        color: $color-gold;
+        font-size: 5rem;
+        line-height: 1;
+        margin-bottom: 3rem;       
+    }
+
+    &__card-text {
+        margin-top: 3rem;
+        -webkit-hyphens:auto;
+        -moz-hyphens:auto;
+        -ms-hyphens:auto;
+        hyphens:auto;
+    }
+
+    &__card-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__btn-more {
+
+        &:link,
+        &:visited {
+            display: inline-block;
+            text-decoration: none;
+            color: $color-dark-2;
+            font-weight: 400;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    &__btn-request {
+
+        & span:first-child {
+            padding: 1.2rem 3rem;
+        }
+
+        & span:last-child {
+            padding: 1.2rem .7rem;
+        }  
+    }
+}

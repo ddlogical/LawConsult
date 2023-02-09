@@ -1,0 +1,64 @@
+// FEATURES SECTION
+.features {
+    background-image: linear-gradient(to left, rgba(0,0,0, .5), rgba(0,0,0, .5)), url(../img/features-bg-small.jpg);
+    background-position: bottom;
+    background-size: cover;
+    text-align: center;
+    color: $color-grey-1;
+
+
+    @media only screen and (min-resolution: 192dpi) and (min-width:37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+        background-image: linear-gradient(to left, rgba(0,0,0, .5), rgba(0,0,0, .5)), url(../img/features-bg.jpg);
+    }
+
+
+    &__container {
+        align-items: flex-start;
+        padding: 5.4rem 1.5rem 4.3rem 1.5rem;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__box {
+        max-width: 34.1rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 3rem;
+        }
+
+        &:first-child {
+            margin-right: 5rem;
+
+            @include respond(tab-port) {
+                margin-right: 0;
+            }
+        }
+        &:last-child {
+            margin-left: 5rem;
+
+            @include respond(tab-port) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        color: $color-white;
+        line-height: 1;
+        padding: 1.4rem 1.4rem;
+        border: $border-gold;
+        margin-bottom: 3rem;
+    }
+
+    &__text {
+        margin-top: 2.3rem;
+
+        
+    }
+}

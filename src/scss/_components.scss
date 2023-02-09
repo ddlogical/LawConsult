@@ -1,0 +1,138 @@
+//REUSE TOP COMPONENT
+.reuse-top {
+    position: relative;
+
+    &__content {
+        margin-left: 14rem;
+    }
+
+    &__content::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 1.8rem;
+        left: 0;
+        background-color: $color-gold;
+        width: 10.6rem;
+        height: 2px;
+    }
+    &__text {
+        margin-top: 2.5rem;
+    }
+}
+.reuse-contact-item {
+    font-weight: 400;
+    line-height: 1;
+    font-family: $font-secondary;
+
+    & span {
+        color: $color-gold;
+        margin-right: 1rem;
+    }
+}
+
+//BUTTONS
+.btn-gold {
+    font-size: 1.6rem;
+    font-family: $font-secondary;
+    font-weight: 400;
+    background-color: $color-gold;
+    border: $border-gold; 
+    border-radius: 0;
+    line-height: 1;
+    padding: 1.25rem 2rem;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        color: $color-white;
+    }
+
+    & span {
+        margin-left: 1rem;
+    }
+}
+
+.btn-transparent {
+
+    &:link,
+    &:visited {
+        text-decoration: none;
+        display: inline-block;
+        font-family: $font-secondary;
+        font-weight: 500;
+        color: $color-white;
+        border: $border-white;
+        transition: all .2s;
+        line-height: 1;
+    }
+
+    &:hover,
+    &:focus {
+        border: $border-gold;
+    }
+
+    & span {
+        display: inline-block;
+    }
+
+    &__icon {
+        transition: all .2s;
+    }
+
+    &:hover &__icon {
+        color: $color-white;
+        background-color: $color-gold;
+
+        //Темный вариант иконки
+        &--dark {
+            color: $color-dark-2;
+        }
+    }
+
+    // Серый вариант кнопки
+    &--grey {
+        &:link,
+        &:visited {
+            color: $color-grey-1;
+            border: $border-grey;
+        }
+        &:hover,
+        &:focus {
+            border: $border-gold;
+        }
+    }
+
+    // Темный вариант кнопки
+    &--grey-dark {
+        &:link,
+        &:visited {
+            color: $color-dark-2;
+            border: $border-dark;
+        }
+
+        &:hover,
+        &:focus {
+            border: $border-gold;
+        }
+    }
+}
+
+.btn-grey {
+    &:link,
+    &:visited {
+        display: block;
+        text-decoration: none;
+        font-family: $font-secondary;
+        font-weight: 400;
+        color: $color-dark-2;
+        border: $border-grey-big;
+    }
+    &:hover,
+    &:focus {
+        color: $color-white;
+        border: $border-gold-big;
+        background-color: $color-gold;
+    }
+}
+

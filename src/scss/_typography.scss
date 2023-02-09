@@ -1,0 +1,59 @@
+.h1,
+.h2,
+.h3,
+.h5 {
+    font-family: $font-secondary;
+    font-weight: 500;
+}
+
+.h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 3.5rem;
+    color: $color-white;
+}
+
+.h2 {
+    font-size: 2.4rem;
+
+    &--dark {
+        color: $color-dark-2;
+    }
+
+    &--light {
+        color: $color-white;
+    }
+
+}
+
+.h3 {
+    font-size: 1.8rem;
+
+    &--dark {
+        color: $color-dark-2;
+    }
+
+    &--light {
+        color: $color-white;
+    }
+}
+
+.h4 {
+    font-family: $font-tertiary;
+    font-weight: 400;
+    font-size: 1.8rem;
+    padding-right: 7rem;
+}
+
+.h5 {
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+
+    &--dark {
+        color: $color-dark-2;
+    }
+
+    &--light {
+        color: $color-white;
+    }
+}

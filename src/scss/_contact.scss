@@ -1,0 +1,136 @@
+.contacts {
+
+    // TOP 
+    &__top {
+        margin-left: 1.5rem;
+        flex: 0 0 45%;
+        margin-top: 5rem;
+
+        @include respond(tab-port) {
+            flex: 0 0 100%;
+        }
+
+    }
+    // BOTTOM 
+    &__form {
+        display: flex;
+        color: $color-dark-1;
+        padding: 4rem 1.5rem;
+        position: relative;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+    }
+
+    // BOTTOM LEFT
+
+    &__form-left {
+        display: flex;
+        flex-direction: column;
+
+        @include respond(tab-port) {
+            align-items: center;
+        }
+    }
+
+    &__user-input {
+        font-weight: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        width: 26.3rem;
+        height: 4rem;
+        line-height: 1;
+        border: $border-grey;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        &:focus {
+            outline: none;
+            border-bottom: $border-gold;
+
+            &:invalid {
+                border-bottom: $border-red;
+            }
+        }
+    }
+
+    &__user-select {
+        font-weight: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        width: 26.3rem;
+        height: 4rem;
+        padding: 0 1.5rem;
+        border: $border-grey;
+        background-color: $color-white;
+        color: $color-grey-2;
+        
+        &:hover, 
+        &:focus {
+            outline: none;
+         }
+    }
+
+    //BOTTOM RIGHT 
+    
+    &__form-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 2.8rem;
+
+        @include respond(tab-port) {
+            align-items: center;
+            margin-top: 1.5rem;
+            margin-left: 0;
+        }
+    }
+
+    &__user-text {
+        width: 55.8rem;
+        height: 19.4rem;
+        border: $border-grey;
+        padding: 2rem;
+        margin-bottom: 2.8rem;
+        resize: none;
+
+        @include respond(phone) {
+            width: 42.8rem;
+            height: 15.4rem;
+        }
+
+        &:focus-visible {
+            outline: none;
+            border: $border-grey;
+        }
+    }
+
+    &__btn-submit {
+        align-self: flex-end;
+        border-radius: 0;
+        border: $border-dark;
+        cursor: pointer;
+
+        @include respond(tab-port) {
+            align-self: center;
+        }
+
+        & span:first-child {
+            padding: 1.2rem 2.5rem;
+        }
+
+        & span:last-child {
+            padding: 1.2rem .7rem;
+        } 
+    }
+
+    &__girl-img {
+        max-height: 46.4rem;
+        position: absolute;
+        z-index: -10;
+        bottom: 0;
+        right: 1.5rem;
+    }
+}
